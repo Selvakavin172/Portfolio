@@ -1,0 +1,236 @@
+body {
+  min-height: 100vh;
+  background: #050505;
+  color: #fff;
+}
+.hero-bg {
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(255, 255, 255, 0.08),
+      transparent 16%
+    ),
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 255, 255, 0.05),
+      transparent 14%
+    ),
+    radial-gradient(
+      circle at 80% 85%,
+      rgba(255, 255, 255, 0.03),
+      transparent 18%
+    ),
+    #050505;
+}
+.glass-card {
+  background: rgba(16, 16, 16, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+.skill-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.preview-card {
+  min-width: 12rem;
+  min-height: 7rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: cursive;
+  }
+  h5 {
+    font-size: 0.65rem;
+    font-weight: 600;
+    display: block;
+    max-width: 100%;
+    text-indent: 10px;
+    line-height: 15px;
+    font-family: cursive;
+  }
+  .more{
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 0.25rem;
+    padding: 0.3rem 0.55rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+}
+.vertical-tag {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.2em;
+}
+.profile-image-container {
+  width: 13.75rem;
+  height: 13.75rem;
+}
+.social-btn {
+  font-size: 0.875rem;
+}
+.profile-name {
+  font-family: cursive !important;
+}
+.menu-icons {
+  right: 30px !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+  button {
+    color: white;
+  }
+  z-index: 1000;
+}
+.landing-content {
+  h1 {
+    font-family: cursive;
+  }
+  .description {
+    font-family: cursive;
+    font-size: 1rem;
+  }
+}
+/* Contact Me */
+.contact {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.contact-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__form {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(16, 16, 16, 0.92);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.contact__form-element {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact--item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact--item label {
+  font-weight: 700;
+}
+
+.contact--item-inp {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact--item-inp:hover,
+.contact--item-inp:focus {
+  box-shadow:
+    0 0 0 1px rgba(13, 110, 253, 0.8),
+    0 0 12px rgba(13, 110, 253, 0.15);
+  outline: none;
+  border-color: rgba(13, 110, 253, 0.8);
+}
+
+.contact--item textarea.contact--item-inp {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.contact--item-submit {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.contact--item-submit-ele,
+.element-link-btn {
+  padding: 0.95rem 2rem;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: #0d6efd;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.element-link-btn {
+  padding: 0.65rem 1.5rem;
+}
+
+.contact--item-submit-ele:hover,
+.element-link-btn:hover {
+  background-color: #0b5ed7;
+  letter-spacing: 0.03em;
+}
+.toast-container {
+  .toast-body {
+    color: black !important;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.skill-container {
+  .skill-card {
+    .card-title {
+      gap: 0.5rem;
+      .percentage {
+        height: 30px;
+        width: 2rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        background-color: #0d6efd;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        display: flex;
+      }
+    }
+  }
+}
+.type{
+    margin-bottom: 2rem;
+}
+@media (max-width: 767px) {
+  .contact__form {
+    padding: 1.5rem;
+  }
+  .menu-icons {
+    right: 0px !important;
+    top: auto !important;
+    bottom: 5px !important;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #050505;
+  }
+}
