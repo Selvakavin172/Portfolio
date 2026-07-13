@@ -155,7 +155,7 @@ function sendEmail(event) {
         return;
     }
 
-    const msg = `Dear ${name.value.trim()},\n\nThank you for reaching out through my portfolio contact form. I have received your message and appreciate the time you took to contact me.\n\nI will get back to you as soon as possible.\n\nIf you have any urgent inquiries or require immediate assistance, please don\'t hesitate to contact me directly at +91 9360148930.\n\nThanks & Regards,\nKavin`;
+    const msg = `Dear ${name.value.trim()},\n\nThank you for reaching out through my portfolio contact form. I have received your message and appreciate the time you took to contact me.\n\nI will get back to you as soon as possible.\n\nIf you have any urgent inquiries or require immediate assistance, please don\'t hesitate to contact me directly at +91 9360148930.\n\nReason for Contact:\n${desc.value.trim()}\n\nThanks & Regards,\nKavin`;
 
     if (window.emailjs) {
         emailjs.send('service_58q09di', 'template_3up0ubm', {
@@ -163,24 +163,6 @@ function sendEmail(event) {
             subject: 'Submission Confirmation: Contact Us Form Received',
             to_email: to.value.trim(),
             cc_email: 'kavinsellamuthu004@gmail.com',
-        }).then(() => {
-            sendtoMe();
-        }, (error) => {
-            alert('Sorry, we could not send your message right now. Please try again later.');
-            console.error('EmailJS error:', error);
-        });
-    } else {
-        alert('Email service is not available. Please try again later.');
-    }
-}
-
-function sendtoMe() {
-     if (window.emailjs) {
-        const msg = `Dear ${name.value.trim()},\n\nThank you for reaching out through my portfolio contact form. I have received your message and appreciate the time you took to contact me.\n\nI will get back to you as soon as possible.\n\nIf you have any urgent inquiries or require immediate assistance, please don\'t hesitate to contact me directly at +91 9360148930.\n\nReason for Contact:\n${desc.value.trim()}\n\nThanks & Regards,\nKavin`;
-        emailjs.send('service_58q09di', 'template_3up0ubm', {
-            message: msg,
-            subject: 'New Submission Confirmation: Contact Us Form Received',
-            to_email: 'kavinsellamuthu004@gmail.com',
         }).then(() => {
             name.value = '';
             to.value = '';
