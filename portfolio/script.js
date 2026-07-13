@@ -161,7 +161,8 @@ function sendEmail(event) {
         emailjs.send('service_58q09di', 'template_3up0ubm', {
             message: msg,
             subject: 'Submission Confirmation: Contact Us Form Received',
-            to_email: to.value.trim()
+            to_email: to.value.trim(),
+            cc_email: 'kavinsellamuthu004@gmail.com',
         }).then(() => {
             name.value = '';
             to.value = '';
